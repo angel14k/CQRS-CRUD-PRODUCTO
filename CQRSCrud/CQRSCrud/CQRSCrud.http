@@ -1,0 +1,43 @@
+@CQRSCrud_HostAddress = https://localhost:7031
+
+GET {{CQRSCrud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{CQRSCrud_HostAddress}}/api/product/GetAll
+
+###
+
+@id=2
+GET {{CQRSCrud_HostAddress}}/api/product/GetAllId/{{id}}
+
+###
+
+
+
+@id=0
+DELETE {{CQRSCrud_HostAddress}}/api/product/Delete/{{id}}
+
+###
+
+@id=5
+PUT {{CQRSCrud_HostAddress}}/api/product/Update
+Content-Type: application/json
+
+{
+   "nombre": "TEST MODIFICADO ",
+    "precio": 5000
+}
+
+###
+
+POST {{CQRSCrud_HostAddress}}/api/product/Create
+Content-Type: application/json
+
+{
+  "nombre": "TEST a modificar",
+    "precio": 5000
+}
+
+###
